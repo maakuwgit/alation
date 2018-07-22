@@ -1,0 +1,9 @@
+[data-background] {
+	background-repeat: no-repeat;
+	background-size: cover;
+  background-position: center;
+	.feature img {
+		min-width: 100%;
+		opacity: 0;
+	}
+}

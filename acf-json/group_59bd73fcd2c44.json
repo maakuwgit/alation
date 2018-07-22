@@ -1,0 +1,329 @@
+{
+    "key": "group_59bd73fcd2c44",
+    "title": "Additional Details",
+    "fields": [
+        {
+            "key": "field_59bd743570aaa",
+            "label": "Promotion",
+            "name": "has_resources",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "resource": "Show Supporting Resources",
+                "tweet": "Show a Tweet"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "label"
+        },
+        {
+            "key": "field_59bd47d865c37",
+            "label": "Additional Information",
+            "name": "details",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "+ Section",
+            "min": 1,
+            "max": "",
+            "layouts": [
+                {
+                    "key": "59bd49e2cd7c6",
+                    "name": "",
+                    "label": "",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_59bd5406a48f1",
+                            "label": "Companies",
+                            "name": "companies",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "button_label": "+ Company",
+                            "min": 1,
+                            "max": "",
+                            "layouts": [
+                                {
+                                    "key": "59bd761516af9",
+                                    "name": "info",
+                                    "label": "Details",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_59bd7641b0e58",
+                                            "label": "Name",
+                                            "name": "name",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "About Alation",
+                                            "placeholder": "About [Company Name]",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_59bd764cb0e59",
+                                            "label": "Description",
+                                            "name": "description",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Alation, the leader in collaborative data cataloging, empowers analysts and information stewards to search, query and collaborate for faster, more accurate insights. The Alation platform leverages artificial intelligence to automatically capture the rich context of enterprise data, including relationships between data sets, analyst usage and trusted insights. Customers include Albertsons, eBay, Pfizer, Square, and some of the world\u2019s largest financial services firms. Headquartered in Silicon Valley, Alation is funded by Costanoa Ventures, Data Collective, Harmony Partners, and Icon Ventures. For more information, visit <a href=\"https:\/\/alation.com\/\">alation.com<\/a>.",
+                                            "tabs": "all",
+                                            "toolbar": "basic",
+                                            "media_upload": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_59bd52a0afd5f",
+                            "label": "Resources",
+                            "name": "resource",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_59bd743570aaa",
+                                        "operator": "==",
+                                        "value": "resource"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_59bd5383afd61",
+                            "min": 0,
+                            "max": "",
+                            "layout": "table",
+                            "button_label": "+ Resource",
+                            "sub_fields": [
+                                {
+                                    "key": "field_59bd52caafd60",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "Type of Link",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": 30
+                                },
+                                {
+                                    "key": "field_59bd5383afd61",
+                                    "label": "Link",
+                                    "name": "href",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "http:\/\/[link to website or social]"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_59bd558ea48f4",
+                            "label": "Tweet",
+                            "name": "tweet",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_59bd743570aaa",
+                                        "operator": "==",
+                                        "value": "tweet"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0
+                        },
+                        {
+                            "key": "field_59bd55bea48f5",
+                            "label": "Media Contact",
+                            "name": "contact",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_59bd55ffa48f6",
+                            "min": 1,
+                            "max": "",
+                            "layout": "block",
+                            "button_label": "+ Row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_59bd55ffa48f6",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Sheridan Smalley",
+                                    "placeholder": "First and last name",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_59bd5626a48f7",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "LEWIS for Alation",
+                                    "placeholder": "Job title or affiliation",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": 50
+                                },
+                                {
+                                    "key": "field_59bd5654a48f8",
+                                    "label": "Email",
+                                    "name": "email",
+                                    "type": "email",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "alation@teamlewis.com",
+                                    "placeholder": "contact@email.com",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_59bd5671a48f9",
+                                    "label": "Phone",
+                                    "name": "phone",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "(415) 432-2447",
+                                    "placeholder": "(123) 456-7890",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "press_release"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1505678053
+}

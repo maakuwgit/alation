@@ -1,0 +1,18 @@
+.band.band-largeslides{
+	.slick-list{
+		z-index: 0;
+	}
+
+	.slick-dots{
+		z-index: 1;
+		top: 0;
+		right: 0;
+		left: auto;
+		bottom: auto;
+		width: auto;
+
+		li{
+			display: block;
+		}
+	}
+}

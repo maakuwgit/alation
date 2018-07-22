@@ -1,0 +1,41 @@
+[class*="btn"] a,[class*="button"] {
+	color: $white;
+}
+
+.btn, 
+.main-navigation-ul > li.menu-item.btn {
+	margin-right: 11px;
+	> a,
+	> a.menu-item-link {
+    padding: rem-calc(8) rem-calc(20) rem-calc(4) rem-calc(20);
+    border-radius: $button-border-radius;
+    color: $white;
+    text-transform: capitalize;
+    background-color: $blue;
+    &:after {
+			background-color: transparent;
+		}
+  }
+}
+ 
+.button {
+	display: inline-block;
+	padding: rem-calc(15) rem-calc(40);
+	border-radius: $button-border-radius;
+}
+
+.button-primary {
+	background: $orange;
+	border: 1px solid $orange !important;
+	transition: all 0.2s linear;
+
+	&:hover{
+		color: $orange !important;
+		background: $white !important;
+	}
+}
+
+.button-outline {
+	background: transparent;
+	border: 1px solid $white !important;
+}

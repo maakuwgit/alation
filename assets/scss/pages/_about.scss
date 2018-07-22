@@ -1,0 +1,129 @@
+main#about {
+	strong:not(.orange):not(.white) {
+		color: inherit;
+	}
+	h1 {
+		margin-bottom:rem-calc(50);
+		+ p {
+			max-width: 700px;
+			margin: 0 auto rem-calc(50); 
+			font-size: rem-calc(18);
+			font-weight: 100;
+		}
+	}
+	h2 {
+		max-width: 300px;
+		z-index: 1;
+		margin-right: auto;
+		margin-bottom: rem-calc(66);
+		margin-left: auto;
+		font-size: rem-calc(40);
+	  font-weight: 100;
+		background-color: $white;
+	}
+	
+	hr {
+		margin-top: rem-calc(-52);
+	}
+	
+	.vcards {
+		color: $text-default;
+		.mk-toggle {
+			.mk-toggle-title {
+		    width: rem-calc(40);
+		    margin: 0 auto;
+		    padding-left: rem-calc(7);
+		    padding-right: 0;
+		    font-weight: 300;
+		    font-size: rem-calc(16);
+				&:before {
+		    	color: $blue;
+				}
+			}
+			.mk-toggle-pane {
+				max-width: 300px;
+				margin: auto;
+			}
+			a {
+		    color: $blue;
+		    i {
+			    color: inherit;
+			  }
+		  }
+		}
+		
+		.mk-social-network-shortcode a {
+	    margin: rem-calc(4);
+	    &:hover [class*="icon-"],
+	    &:hover [class*="fa-"] {
+		    color: $aqua-dark;
+		  }
+	  }
+		
+		figcaption {
+	    margin-top: rem-calc(-15);
+	    margin-bottom: rem-calc(4);
+	    text-align:center;
+	    color: $text-default;
+	    font-size: rem-calc(16);
+	    font-style:inherit;
+	    font-weight:300;
+	  }
+	}
+	
+	.thumbnails {
+		margin-bottom: auto;
+	}
+	
+	.thumbnail {
+		margin-bottom: auto;
+		text-align:center;
+		img {
+			width: 100%;
+			max-width: 270px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}
+
+.address-map {
+	text-align: center;
+	margin-top: rem-calc(23);
+	color: $white;
+	border-style: solid;
+	border-top-width: 1px;
+	padding-top: rem-calc(23);
+	border-color: rgba(255,255,255,.2);
+	a {
+		font-weight: 500;
+		border-bottom: dotted 1px $white;
+	}
+}
+
+@include media('<=sm') {
+	main#about {
+		#map-overlay {
+			bottom: rem-calc(58);
+			left: 0;
+			width: 100vw;
+			height: rem-calc(220);
+		}
+		div.address-map {
+			margin-top: rem-calc(-23);
+		}
+	}
+}
+
+@include media(">=lg") {
+	main#about #investors.band {
+		padding-top: rem-calc(40);
+		padding-bottom: 0;
+	}
+	.thumbnails {
+		margin-bottom: auto;
+	}
+	.thumbnail img {	
+		margin-bottom: rem-calc(10);
+	}
+}

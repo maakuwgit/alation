@@ -1,0 +1,60 @@
+#map {
+	width: 100vw;
+  height: rem-calc(500);
+}
+
+div.map-line {
+	color: $white;
+	padding-left: rem-calc(9);
+	margin-bottom: rem-calc(2);
+	&.map-line-no-img {
+	  padding-left: rem-calc(31);
+	}
+	&.map-al-logo {
+    padding-left: rem-calc(4);
+    span {
+    	margin-left: rem-calc(-6);
+		}
+	}
+}
+
+#map-overlay {
+	position: absolute;
+  z-index: 1;
+  right: 0;
+	height: rem-calc(465);
+	width: rem-calc(400);
+	background-color: rgba(82,105,116,.85);
+	padding: rem-calc(28);
+	font-size: rem-calc(18);
+	line-height: 129%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	* {
+		color: white;
+	}
+	img {
+		width: rem-calc(14);
+		margin-right: rem-calc(10);
+	}
+}
+
+.map-overlay-wrap {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	right: 0;
+}
+
+img.al-logo {
+    width: rem-calc(23) !important;
+}
+
+.map-overlay-inner {
+    width: rem-calc(397);
+}

@@ -1,0 +1,1 @@
+<aside class="wrap text-center"><?php echo wpb_js_remove_wpautop(get_sub_field('callout_copy')); ?></aside>

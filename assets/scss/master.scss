@@ -1,0 +1,75 @@
+/*!
+Theme Name:     Alation
+Theme URI: 		http://alation.com
+Description:    Alation custom theme. This version has an added "Edit" button on Blog posts
+Author:         UpTrending
+Theme URI: 		http://alation.com
+Template:       jupiter
+Version:        3.8.14
+*/
+
+@import "utilities/icons";
+@import "variables";
+
+// Legacy Customizations
+@import "legacy";
+
+// Utilities
+// Bourbon and Neat are installed with NPM
+@import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat";
+@import "utilities/include-media";
+@import "utilities/mixins";
+@import "utilities/functions";
+
+// Base
+@import "base/fonts";
+@import "base/base";
+@import "base/layout";
+
+// Elements
+@import "elements/footer";
+@import "elements/header";
+@import "elements/buttons";
+@import "elements/forms";
+@import "elements/select";
+
+// bands
+@import "bands/core";
+@import "bands/hero";
+@import "bands/carousel";
+@import "bands/columns";
+@import "bands/full_width";
+@import "bands/grid";
+@import "bands/filterable";
+@import "bands/tabs";
+@import "bands/centered";
+@import "bands/largeslides";
+
+// Pages
+@import "pages/about";
+@import "pages/blog";
+@import "pages/careers";
+@import "pages/case-studies";
+@import "pages/customers";
+@import "pages/event";
+@import "pages/events";
+@import "pages/home";
+@import "pages/page";
+@import "pages/persona";
+@import "pages/press_release";
+@import "pages/product";
+@import "pages/promotions";
+@import "pages/news";
+@import "pages/resources";
+@import "pages/resource";
+@import "pages/single";
+@import "pages/learn-more";
+
+// Plugins
+@import "plugins/slick/slick";
+@import "plugins/slick/slick-theme";
+@import "plugins/backgrounder";
+@import "plugins/mapbox";
+@import "plugins/magnific/main";
+@import "plugins/wpcf7";

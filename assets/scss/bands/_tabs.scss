@@ -1,0 +1,221 @@
+.band.band-tabsection{
+	background: #444 no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	padding-bottom: 0 !important;
+
+	.band-title{
+		text-align: left;
+		color: #FFF !important;
+	}
+
+	.band-caption{
+		position: relative;
+		text-align: left;
+		margin-bottom: 2em;
+
+		@include media(">=sm") {
+			padding-right: 50%;
+		}
+	}
+
+	.band-tabcontainer{
+		background: rgba(0,0,0,0.75);
+		color: #FFF;
+
+		@include media(">=sm") {
+			padding-bottom: 100px;
+		}
+
+		@include media("<sm") {
+			.band-container{
+				margin: 0;
+			}
+		}
+	}
+
+
+	p, ul, ol{
+		color: #FFF;
+	}
+
+	.band-tab-nav{
+		display: none;
+
+		@include media(">=sm") {
+			display: block;
+		}
+
+		a{
+			padding: 48px 0;
+			margin-right: 50px;
+			color: rgba(255,255,255,0.5);
+			float: left;
+			border-bottom: none !important;
+			letter-spacing: 0.025em;
+			text-transform: uppercase;
+			transition: color 0.3s linear;
+			border-top: 5px solid transparent;
+
+			&.active{
+				color: #FFF;
+				border-top-color: $orange;
+			}
+
+			&:hover{
+				color: #FFF;
+			}
+		}
+	}
+
+	.nav-accordian{
+		position: relative;
+		padding: 48px 20px;
+		color: rgba(255,255,255,0.5);
+		border-bottom: none !important;
+		letter-spacing: 0.025em;
+		text-transform: uppercase;
+		transition: color 0.3s linear;
+		border-top: 1px solid rgba(255,255,255,0.3);
+		display: block;
+
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			height: 28px;
+			width: 28px;
+			background: url('assets/img/icon-plus.svg');
+			background-size: contain;
+			transition: transform 0.3s linear;
+		}
+
+		@include media(">=sm") {
+			display: none;
+		}
+	}
+
+	.band-tab-active{
+		.nav-accordian{
+			color: #FFF;
+
+			&:after{
+				transform: translateY(-50%) rotate(45deg);
+			}
+		}
+	}
+
+	.band-tabs{
+		@include clearfix;
+
+		.band-tab{
+			display: block;
+
+			@include media(">=sm") {
+				display: none;
+			}
+
+			&.band-tab-active{
+				@include media(">=sm") {
+					display: block;
+				}
+
+				.band-tab-inner{
+					display: block;
+				}
+			}
+
+			.band-tab-inner{
+				display: none;
+			}
+		}
+	}
+
+	.band-tab-title{
+		color: $orange !important;
+		font-weight: 100 !important;
+		font-size: 40px !important;
+		margin-bottom: 30px;
+		padding: 0 20px;
+
+		@include media(">=sm") {
+			padding: 0;
+		}
+	}
+
+	.band-tab-content{
+		margin-bottom: 20px;
+		padding: 0 20px;
+
+		@include media(">=sm") {
+			float: left;
+			margin-bottom: 0;
+			width: 70%;
+			padding: 0;
+		}
+
+		p, ul, ol{
+			@include media(">=sm") {
+				padding-right: 25%;
+			}
+		}
+
+		img{
+			max-width: 160%;
+			height: auto;
+		}
+	}
+
+	.band-tab-sidebar{
+		padding: 0 20px;
+
+		@include media(">=sm") {
+			float: right;
+			width: 28%;
+			padding: 0;
+		}
+
+		h6{
+			color: #FFF !important;
+			text-transform: uppercase !important;
+			font-weight: 100 !important;
+			font-size: 24px !important;
+			margin-bottom: 25px;
+		}
+
+		.sidebar-block{
+			margin-bottom: 30px;
+		}
+
+		.sidebar-block-content{
+			ul{
+				list-style: none;
+				padding-left: 0;
+				margin-left: 0;
+
+				li{
+					padding-left: 1em;
+					text-indent: -.7em;
+
+					&:before{
+						content: "• ";
+						color: $orange;
+					}
+				}
+			}
+		}
+
+		.list-title{
+			font-size: 24px;
+			margin-bottom: 30px;
+			color: $orange;
+		}
+
+		.sidebar-img{
+			max-width: 105%;
+			margin-left: -5%;
+		}
+	}
+}

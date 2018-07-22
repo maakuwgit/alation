@@ -1,0 +1,110 @@
+@font-face {
+	font-family: "theme-icons";
+	src: url('assets/fonts/theme-icons.eot');
+	src: url('assets/fonts/theme-icons.eot?#iefix') format('eot'),
+		url('assets/fonts/theme-icons.woff2') format('woff2'),
+		url('assets/fonts/theme-icons.woff') format('woff'),
+		url('assets/fonts/theme-icons.ttf') format('truetype'),
+		url('assets/fonts/theme-icons.svg#theme-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "theme-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-down {
+		$char: unquote("\"")+unquote(str-insert(E001,"\\", 1))+unquote("\"");
+	}
+	@if $filename == arrow-left {
+		$char: unquote("\"")+unquote(str-insert(E002,"\\", 1))+unquote("\"");
+	}
+	@if $filename == arrow-right {
+		$char: unquote("\"")+unquote(str-insert(E003,"\\", 1))+unquote("\"");
+	}
+	@if $filename == calendar {
+		$char: unquote("\"")+unquote(str-insert(E004,"\\", 1))+unquote("\"");
+	}
+	@if $filename == chart-circle {
+		$char: unquote("\"")+unquote(str-insert(E005,"\\", 1))+unquote("\"");
+	}
+	@if $filename == document-circle {
+		$char: unquote("\"")+unquote(str-insert(E006,"\\", 1))+unquote("\"");
+	}
+	@if $filename == document {
+		$char: unquote("\"")+unquote(str-insert(E007,"\\", 1))+unquote("\"");
+	}
+	@if $filename == dot {
+		$char: unquote("\"")+unquote(str-insert(E008,"\\", 1))+unquote("\"");
+	}
+	@if $filename == play {
+		$char: unquote("\"")+unquote(str-insert(E009,"\\", 1))+unquote("\"");
+	}
+	@if $filename == plus {
+		$char: unquote("\"")+unquote(str-insert(E00A,"\\", 1))+unquote("\"");
+	}
+	@if $filename == storage-circle {
+		$char: unquote("\"")+unquote(str-insert(E00B,"\\", 1))+unquote("\"");
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow-down {
+	@include icon(arrow-down);
+}
+.icon-arrow-left {
+	@include icon(arrow-left);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-calendar {
+	@include icon(calendar);
+}
+.icon-chart-circle {
+	@include icon(chart-circle);
+}
+.icon-document-circle {
+	@include icon(document-circle);
+}
+.icon-document {
+	@include icon(document);
+}
+.icon-dot {
+	@include icon(dot);
+}
+.icon-play {
+	@include icon(play);
+}
+.icon-plus {
+	@include icon(plus);
+}
+.icon-storage-circle {
+	@include icon(storage-circle);
+}

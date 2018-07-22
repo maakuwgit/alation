@@ -1,0 +1,17 @@
+main#page {
+	> header {
+		margin-top: rem-calc(50);
+		margin-bottom: rem-calc(10);
+	}
+	
+	> div.wrap {
+		margin-bottom: rem-calc(20);
+	}
+	
+	@include media('>md') {		
+		
+		> div.wrap {
+			margin-bottom: rem-calc(35);
+		}
+	}
+}

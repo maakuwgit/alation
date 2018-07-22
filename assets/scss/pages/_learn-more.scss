@@ -1,0 +1,57 @@
+body.page-learn-more{
+	#theme-page .theme-page-wrapper .theme-content{
+		padding-bottom: 0;
+	}
+	
+	.form-demo {
+		margin-bottom: rem-calc(50);
+	}
+
+	@include media("<=sm") {
+		// Side gaps
+		.vc_col-sm-3.wpb_column.column_container{
+			display: none;
+		}
+
+		// Title & Content
+		.vc_col-sm-6.wpb_column.column_container{
+			width: 100%;
+		}
+	}
+
+	.band.form-demo{
+		max-width: 550px;
+		padding: 20px;
+
+		.band-title, .band-caption{
+			display: none;
+		}
+
+		.hbspt-form form.hs-form{
+			.hs-form-field{
+				width: 100%;
+				float: none;
+				margin-bottom: 10px;
+				display: block;
+				background: transparent;
+
+				&:after{
+					display: none;
+				}
+
+				.hs-input{
+					border-radius: $button-border-radius;
+				}
+			}
+
+			.hs-button{
+				width: 100%;
+				border-radius: $button-border-radius;
+			}
+		}
+	}
+
+	.select.select-theme-default .select-content{
+		width: calc(100vw - 80px);
+	}
+}

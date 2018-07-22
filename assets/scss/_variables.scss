@@ -1,0 +1,35 @@
+//
+// variables
+//
+$button-border-radius: 4px;
+$img_uri: 'assets/img/';
+
+
+// Color
+$white: #ffffff;
+$orange: #e3682a;
+$pumpkin: #e05903;
+$blue: #265eac;
+$royal-blue: #3342b5;
+$navy: #2a3a96;
+$blue-soft: #556a8a;
+$light-blue: #edf2f8;
+$slate-blue: #9BB8D3;
+$aqua-dark: #40718c;
+$grey: #efefed;
+$grey-soft: #a5a5a0;
+$grey-light: #f9f9f9;
+$text-default: #65665c;
+$menu-anchor-hover: #999a93;
+
+// Slick
+$slick-font-path: "./assets/fonts/";
+$slick-font-family: "theme-icons";
+$slick-prev-character: icon-char('arrow-left');
+$slick-next-character: icon-char('arrow-right');
+$slick-dot-character: icon-char('dot');
+$slick-arrow-color: $text-default;
+$slick-loader-path: './assets/img/';
+
+// Breakpoints
+$breakpoints: (xs: 320px, sm: 640px, md: 1024px, lg: 1280px, xl: 1600px);

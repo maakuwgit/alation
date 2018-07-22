@@ -1,0 +1,231 @@
+/*==========[ Resets ]=========*/
+*:focus {
+  outline: none;
+}
+
+html, body{
+	-webkit-text-size-adjust: auto;
+	text-size-adjust: auto;
+}
+
+a {
+	color: $royal-blue;
+}
+
+address {
+	font-style: normal;
+}
+
+blockquote {
+	position: relative;
+	background-color: transparent;
+	padding-left: rem-calc(50);
+	padding-right: rem-calc(50);
+	font-family: 'Museo Sans', sans-serif;
+	font-weight: 400;
+	font-size: rem-calc(19);
+	line-height: 1.5;
+	color: $text-default;
+	p {
+		margin: auto;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		font-style: inherit;
+		color: inherit;
+	}
+	&:before {
+		content: '\201C';
+		position: absolute;
+		z-index: -1;
+		left: rem-calc(15);
+		top: rem-calc(-15);
+		font-family: 'Georgia', serif;
+		font-weight: 700;
+		font-size: rem-calc(70);
+		color: $light-blue;
+	}
+}
+
+cite {
+	display: block;
+	margin-top: rem-calc(25);
+	font-style: normal;
+	font-weight: 300;
+	text-align: right;
+}
+
+dd {
+	padding: 0;
+}
+
+hr {
+	height: 1px;
+	border: none;
+	border-bottom: solid 1px $orange;
+}
+
+main {
+	padding-top: 62px;
+	padding-top: 3.875rem;
+}
+
+p {
+	font-family: 'Museo', serif;
+}
+
+ul {
+	font-size: rem-calc(16);
+	li {
+		font-size: inherit;
+	}
+}
+	
+/*==========[ Repeatables ]=========*/
+b, strong,
+th, thead td {
+	font-family: inherit;
+	font-weight: 500;
+}
+html body, 
+h1 + p, 
+button, .button,
+time,
+.band-caption p, 
+.band-tab-content p,
+.colcontent {
+	font-family: 'Museo Sans', sans-serif;
+}
+html body, h2, p, time,
+h1 b, h1 strong,
+body #theme-page h2 {
+	font-weight: 300;
+}
+
+h1, 
+body .h1, 
+#persona .band-title, 
+body #theme-page h1 {
+	font-size: rem-calc(40);
+	font-weight: 100;
+}
+
+h2, 
+body #theme-page h2 {
+	font-size: rem-calc(24);
+}
+
+h1, h2, 
+body #theme-page h1, body #theme-page h2 {
+	text-transform: initial;
+}
+
+b, strong {
+	text-decoration: inherit;
+}
+
+/*==========[ Helpers ]=========*/
+/* Display */
+.block {
+	display: block;
+}
+	a.block {
+		height: 100%;
+	}
+.iblock {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
+/* Position */
+.relative {
+	position: relative;
+}
+.fixed {
+	position: fixed;
+}
+.text-center {
+	text-align: center;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.text-right {
+	text-align: right;
+}
+/* Color */
+.orange {
+	color: $orange;
+}
+.blue {
+	color: $blue;
+}
+.royal-blue {
+	color: $royal-blue;
+}
+.blue-soft {
+	color: $blue-soft;
+}
+.light-blue {
+	color: $light-blue;
+}
+.slate-blue {
+	color: $slate-blue;
+}
+.aqua-dark {
+	color: $aqua-dark;
+}
+.grey {
+	color: $grey;
+}
+.grey-soft {
+	color: $grey-soft;
+}
+.grey-light {
+	color: $grey-light;
+}
+.text-default {
+	color: $text-default;
+}
+
+/* Global */
+.pulse {
+	padding-bottom: 3.125rem;
+	background: url($img_uri + 'hero-bg-peaks.png') no-repeat;
+	background-size: 1365px auto;
+	background-position: bottom center;
+}
+
+.hero {
+	img {
+		width: 100%;
+	}
+}
+
+.callout {
+	padding: 1rem;
+	background-color: $light-blue;
+	> :last-child {
+		margin-bottom: auto;
+	}
+	dt {
+		font-weight: 400;
+		a {
+			color: $royal-blue;
+			font-weight: 300;
+			border-bottom: dotted 1px;
+		}
+	}
+}
+
+@include media('>=lg') {
+	/* Image Overlays */
+	a:hover .image-hover-overlay {
+		opacity: 0.9;
+	}
+	
+	.pulse {
+		background-size: 100% auto;
+	}
+}

@@ -1,0 +1,43 @@
+/**
+ * Layout :: Grid
+ */
+.band-columns {
+
+    // Column Wrapper Container
+    .column_container {
+
+        .column {
+            float: left;
+            width:100%;
+        }
+
+        // 2 Columns
+        &.columns_2 .column{
+            @include media(">=sm") {
+                width: 50%;
+            }
+        }
+
+        // 3 Columns
+        &.columns_3 .column{
+            @include media(">=md") {
+                width: 33.33%
+            }
+            @include media(">=sm") {
+                width: 50%;
+            }
+        }
+
+        // 4 Columns
+        &.columns_4 .column{
+            @include media(">=md") {
+                width: 25%
+            }
+            @include media(">=sm") {
+                width: 50%;
+            }
+        }
+
+    }
+}
+

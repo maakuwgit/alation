@@ -1,0 +1,25 @@
+main#news {
+	article {
+		margin-bottom: rem-calc(15);
+		padding-left: rem-calc(15);
+		padding-right: rem-calc(15);
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+	}
+	h2 a {
+		color: #404040;
+	}
+	h4, 
+	time {
+    color: #607d8b;
+    font-size: rem-calc(14);
+	}
+	.news-sub {
+		margin-top: rem-calc(-10);
+		margin-bottom: rem-calc(14);
+  }
+	.cell img {
+		max-width: 100%;
+	}
+}

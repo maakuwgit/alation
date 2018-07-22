@@ -1,0 +1,52 @@
+//
+// Footer
+//
+
+body > footer {
+	padding-top: rem-calc(10);
+	padding-bottom: rem-calc(80);
+	h6 {
+		margin-bottom: rem-calc(20);
+		text-transform: capitalize;
+		font-weight: 300;
+		color: $blue-soft;
+		font-size: rem-calc(20);
+	}
+	.widget {
+		padding: rem-calc(10);
+		font-size: rem-calc(12);
+		font-weight: 400;
+		a {
+			font-size: rem-calc(12);
+			color: $royal-blue;
+			&:hover {
+				border-bottom: 1px dotted $blue;
+			}
+			&[class*="-icons"] {
+				color: #aab5c5;
+			}
+			&:first-of-type {
+				[class*="-icon-"]{
+					margin-left: auto;
+				}
+			}
+			[class*="-icon-"]{
+				margin-left: rem-calc(15);
+				font-size: rem-calc(16);
+			}
+		}
+	}
+	.widget_recent_entries ul {
+		list-style: none;
+		margin-left: auto;
+		margin-bottom: auto;
+	}
+	
+	@media only screen and ( max-width:48em ){		
+		.order-7 {
+			-webkit-order: 7;
+			-ms-flex-order: 7;
+			order: 7;
+		}
+	}
+}

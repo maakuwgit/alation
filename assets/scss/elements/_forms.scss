@@ -1,0 +1,316 @@
+$form-input-color: #797a72 !default;
+$form-input-font-size: 12px !default;
+$form-input-line-height: $form-input-font-size * 1.1 !default;
+$form-input-padding-vertical: 20px !default;
+$form-input-padding-horizontal: 20px !default;
+$form-input-height: $form-input-line-height + ($form-input-padding-vertical * 2);
+
+form{
+	input{
+
+	}
+}
+
+.form-styled{
+	input, select{
+		background-color: #FFF;
+		border: none;
+		font-size: $form-input-font-size;
+		line-height: $form-input-line-height;
+		padding: $form-input-padding-vertical $form-input-padding-horizontal;
+		color: $form-input-color;
+		border-radius: $button-border-radius;
+	}
+}
+
+.form-inline{
+	.input-group{
+		position: relative;
+		display: inline-block;
+
+		label{
+			position: absolute;
+			top: 0;
+			left: $form-input-padding-horizontal;
+			line-height: $form-input-height;
+			color: $form-input-color;
+			pointer-events: none;
+			transition: top 0.3s ease-out, color 0.3s ease-out;
+		}
+
+		input:focus + label{
+			top: 0 - ($form-input-padding-vertical * 2); // Generate negative number
+			color: #fff;
+		}
+	}
+}
+
+
+/* Demo Footer Form */
+html body {
+.band.form-demo{
+	padding: 90px 0;
+
+	.band-caption{
+		margin-bottom: 40px;
+	}
+
+	.input-group{
+		background: #FFF;
+		position: relative;
+		height: $form-input-height;
+		margin-bottom: 10px;
+
+		@include media(">=sm") {
+			margin-bottom: 0;
+
+			&:after{
+				position: absolute;
+				content: "";
+				width: 1px;
+				height: 60%;
+				right: 0;
+				top: 20%;
+				background: #c9cbc3;
+			}
+
+			&:nth-child(3):after{
+				display: none;
+			}
+		}
+	}
+
+	.input-group, .button-primary{
+		display: block;
+		float: none;
+		width: 100%;
+		border-radius: $button-border-radius;
+
+		@include media(">=sm") {
+			float: left;
+			width: 25%;
+			border-radius: 0;
+		}
+	}
+
+
+	@include media(">=sm") {
+		.input-group:first-child{
+			border-top-left-radius: $button-border-radius;
+			border-bottom-left-radius: $button-border-radius;
+		}
+
+		.button-primary{
+			border-top-right-radius: $button-border-radius;
+			border-bottom-right-radius: $button-border-radius;
+		}
+	}
+
+	input, select{
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	input{
+		//border-radius: 5px;
+		margin-bottom: 0;
+	}
+
+	input:focus{
+		border: none;
+	}
+
+	input:focus + label{
+		color: #adc8e8;
+	}
+
+	select{
+		background: #fff !important;
+		border: none !important;
+		padding: 0 !important;
+		line-height: $form-input-height;
+		height: $form-input-height;
+	}
+
+	.button-primary{
+		padding-top: 0;
+		padding-bottom: 0;
+		line-height: $form-input-height;
+		height: $form-input-height;
+	}
+}
+
+.form-demo{
+	.band-title{
+		font-weight: 100;
+	}
+
+	.hbspt-form{
+		.submitted-message{
+			text-align: center;
+		}
+
+		form.hs-form{
+			.hs-form-field{
+				position: relative;
+				margin-bottom: 10px;
+				position: relative;
+				display: block;
+
+				@include media(">=sm") {
+					height: $form-input-height;
+					margin-bottom: 0;
+					background: #FFF;
+					display: inline-block;
+					float: left;
+					width: 25%;
+
+					&:after{
+						position: absolute;
+						content: "";
+						width: 1px;
+						height: 60%;
+						right: 0;
+						top: 20%;
+						background: #c9cbc3;
+					}
+				}
+
+				> label{
+					display: none;
+					position: absolute;
+					top: 0;
+					left: $form-input-padding-horizontal;
+					line-height: $form-input-height;
+					color: $form-input-color;
+					pointer-events: none;
+					transition: top 0.3s ease-out, color 0.3s ease-out;
+				}
+
+				.hs-input{
+					background-color: #FFF;
+					border: none;
+					font-size: $form-input-font-size;
+					line-height: $form-input-line-height;
+					padding: $form-input-padding-vertical $form-input-padding-horizontal;
+					color: $form-input-color;
+					border-radius: $button-border-radius;
+					margin-bottom: 0;
+					width: 100%;
+
+					@include media(">=sm") {
+						border-radius: 0;
+					}
+				}
+			}
+
+			:first-child{
+				@include media(">=sm") {
+					.hs-form-field{
+						border-top-left-radius: $button-border-radius;
+						border-bottom-left-radius: $button-border-radius;
+
+						.hs-input{
+							border-top-left-radius: $button-border-radius;
+							border-bottom-left-radius: $button-border-radius;
+						}
+					}
+				}
+			}
+
+			.hs-button{
+				border: none;
+				color: #FFF;
+				background: $orange;
+				text-transform: uppercase;
+				padding-top: 0;
+				padding-bottom: 0;
+				border-radius: $button-border-radius;
+				line-height: $form-input-height;
+				height: $form-input-height;
+
+				@include media(">=sm") {
+					float: left;
+					width: 25%;
+					border-radius: 0;
+					border-top-right-radius: $button-border-radius;
+					border-bottom-right-radius: $button-border-radius;
+				}
+			}
+
+
+			select{
+				background: #fff !important;
+				border: none !important;
+				padding: 0 !important;
+				line-height: $form-input-height;
+				height: $form-input-height;
+			}
+
+			// Custom styles
+			&.select-replaced{
+				select{
+					display: none;
+				}
+			}
+
+			.select-target{
+				width: 100%;
+				border: 0;
+				background: #FFF;
+				font-size: $form-input-font-size;
+				line-height: $form-input-line-height;
+				padding: $form-input-padding-vertical $form-input-padding-horizontal;
+				color: $form-input-color;
+				border-radius: $button-border-radius;
+			}
+		}
+
+		.hs-error-msgs{
+			padding-bottom: 10px;
+			margin: 0;
+
+			@include media(">=sm") {
+				position: absolute;
+				top: $form-input-height;
+				left: 0;
+			}
+
+			li{
+				text-align: center;
+				margin-left: 0;
+				list-style: none;
+			}
+		}
+
+	}
+
+	&.form-fields-three{
+		form.hs-form{
+			.hs-form-field:nth-child(3n):after{
+				display: none;
+			}
+		}
+	}
+
+	&.form-fields-four{
+		form.hs-form{
+			@include media(">=sm") {
+				.hs-form-field, .hs-button{
+					width: 20%;
+				}
+			}
+
+			.hs-form-field{
+				&:nth-child(3n):after{
+					display: block;
+				}
+
+				&:nth-child(4n):after{
+					display: none;
+				}
+			}
+		}
+	}
+}
+}

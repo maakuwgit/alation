@@ -1,0 +1,25 @@
+/**
+ * Layout :: Carousel
+ */
+.band-carousel {
+
+    // Slide Wrapper Container
+    .band-slides {
+    	text-align: center;
+    	position: relative;
+
+        .band-slide {
+			display: inline-block;
+
+			.slide-thumb{
+				max-width: 100%;
+				display: block;
+			}
+        }
+
+        .slick-list{
+        	overflow: hidden;
+        }
+    }
+}
+
